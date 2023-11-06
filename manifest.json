@@ -1,0 +1,27 @@
+{
+    "name": "Profil PWA",
+    "short_name": "PWA Profil",
+    "description": "Profil PWA dengan foto, NIM, kelas, dan komentar.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0078e7",
+    "orientation" : "portrait-primary",
+    "icons": [
+        {
+            "src": "/img/icon-192x192.png",
+            "type": "image/png", 
+            "sizes": "192x192"
+          },
+          {
+            "src": "/img/icon-384x384.png",
+            "type": "image/png", 
+            "sizes": "384x384"
+          },
+          {
+            "src": "/img/icon-512x512.png",
+            "type": "image/png", 
+            "sizes": "512x512"
+          } 
+    ]
+}

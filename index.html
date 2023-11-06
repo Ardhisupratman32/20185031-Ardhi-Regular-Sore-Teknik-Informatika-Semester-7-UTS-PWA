@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Tambahkan tag <link> untuk manifest PWA dan ikon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    
+
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <img src="img/foto-anda.png" alt="Foto Anda" class="rounded-circle img-fluid" style="max-width: 150px">
+            <h1 class="mt-3">Ardhi Supratman</h1>
+            <p class="lead">NIM: 20185031</p>
+            <p class="lead">Kelas: Regular Malam</p>
+            <p class="lead">Semester: 7</p>
+            <p class="lead">Mata Kuliah: Cloud Computing & Mobile Programing</p>
+            <p class="lead">Tujuan Belajar PWA: Isi dengan tujuan belajar PWA</p>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <form id="komentar-form" class="mb-4">
+            <h2 class="title"> Tinggalkan Komentar</h2>
+            <input type="text" id="nama" class="form-control" rows="3" placeholder="Nama" required>
+            <textarea id="komentar" class="form-control" rows="4" placeholder="Ketik komentar Anda di sini"></textarea>
+            <button type="submit" class="btn btn-primary mt-3">Kirim</button>
+          </form>
+      <div id="daftar-komentar" class="rounded p-3">
+              <!-- Komentar akan ditampilkan di sini -->
+      </div>    
+    </div>
+
+<!-- ... (kemudian, di dalam <script> tag) -->
+
+    <script src="indexeddb.js"></script>
+
+    <!-- Register Service Worker -->
+    <script>
+        navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+        .then(function(registration) {
+        console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(function(error) {
+        console.error('Service Worker registration failed:', error);
+        });
+      </script>
+
+      <!-- Izin Notofikasi -->
+    <script>
+        if ('Notification' in window) {
+          Notification.requestPermission()
+            .then(function(permission) {
+              if (permission === 'granted') {
+                // Izin notifikasi diberikan
+              } else if (permission === 'denied') {
+                // Izin notifikasi ditolak
+              } else {
+                // Izin notifikasi belum diajukan
+              }
+            })
+            .catch(function(error) {
+              console.error('Gagal meminta izin notifikasi:', error);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Styling for the left side (profile) */
+.profile-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.profile h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.profile p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0; /* Menambahkan margin atas dan bawah */
+}
+
+/* Styling for NIM, kelas, semester, and mata kuliah */
+.profile p:nth-child(2),
+.profile p:nth-child(3),
+.profile p:nth-child(4),
+.profile p:nth-child(5) {
+    text-align: left;
+    margin: 5px 0;
+}
+
+/* Style untuk tampilan komentar */
+#daftar-komentar {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .comment {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .comment p {
+    margin: 0;
+  }
+  
+  /* Style untuk formulir komentar */
+  #komentar-form {
+    margin-top: 20px;
+  }
+  
+  #komentar {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #submit-komentar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #submit-komentar:hover {
+    background-color: #0056b3;
+  }
+
+  #nama {
+    margin-bottom: 10px;
+}
+  
+
+
+
+
+/* Styling for screens smaller than 768px (ponsel) */
+@media (max-width: 768px) {
+    .profile {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile h1 {
+        font-size: 20px;
+    }
+
+    .profile p {
+        font-size: 14px;
+    }
+
+    /* Adjust the comment form for smaller screens */
+    #komentar {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Styling for screens between 768px and 1024px (tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .profile {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile h1 {
+        font-size: 22px;
+    }
+
+    .profile p {
+        font-size: 16px;
+    }
+
+    /* Adjust the comment form for tablet screens */
+    #komentar {
+        width: 80%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+}
+
